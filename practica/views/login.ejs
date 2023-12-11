@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div id="fondo">
+
+        <form class="form-user" action="/login" method="post">
+            <h1>Login</h1>
+            <p id="errors">
+                <%= errors %>
+            </p>
+            <div class="inputbox">
+                <input required name="email" maxlength="40" type="email">
+                <label for="">Email</label>
+
+            </div>
+            <div class="inputbox">
+                <input id="password" required name="password" type="password">
+                <label for="">Contraseña</label><i id="togglePassword" class="fa-regular fa-eye"></i>
+            </div>
+            <div class="forget">
+                <label for=""><input type="checkbox">Recordar <a href="">Olvide mi contraseña</a></label>
+            </div>
+            <input class="btn-submit" value="Iniciar sesion" type="submit">
+            <div class="login">
+                <p>Ya tengo una cuenta <a href="/register">Registrarme</a></p>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

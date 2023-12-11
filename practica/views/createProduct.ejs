@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <h2>
+
+
+    </h2>
+    <form id="createProduct" action="/products/create" method="post" enctype="multipart/form-data">
+        <%= errors.title %>
+            <input placeholder="Nombre" name="title" required type="text">
+            <input placeholder="Descripcion" name="description" required type="text">
+            <%= errors.price %>
+                <input placeholder="Precio" name="price" required type="text">
+                <input multiple name="img" type="file">
+                <input type="submit">
+    </form>
+</body>
+
+</html>
