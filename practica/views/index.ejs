@@ -5,16 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <ul>
-        <li><a href="/login">Iiniciar sesion</a></li>
-        <li><a href="/register">Registrarme</a></li>
-    </ul>
-    <h1>Bienvenido al home <%= userName %>!</h1>
-    <h3><a href="/products/list">Lista de productos</a></h3>
 
+    <% if (user) { %>
+        <h1>Bienvenido al home <%= user.userName %>!</h1>
+        <button><a href="/logout">Cerrar sesion</a></button>
+        <% }else {%>
+            <h1>Bienvenido! Te recomendamos registrarte o iniciar sesion!</h1>
+            <ul>
+                <li><a href="/login">Iiniciar sesion</a></li>
+                <li><a href="/register">Registrarme</a></li>
+            </ul>
+            <% }%>
+                <h3><a href="/products/list">Lista de productos</a></h3>
+
+                <div class="border-container">
+                    <div class="border"></div>
+                    <div class="content"></div>
+                </div>
 </body>
 
 </html>

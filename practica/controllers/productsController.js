@@ -1,6 +1,6 @@
 const models = require("../models/productsModels");
 const model = require("../models/usersModel");
-const { val, validationResult } = require("express-validator");
+const { validationResult } = require("express-validator");
 const controller = {
   getList: (req, res) => {
     const products = models.findAll();
